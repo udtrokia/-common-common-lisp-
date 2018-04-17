@@ -42,14 +42,14 @@
 
 ### Loop
 
-| construct |     |    |         |        |       |
-| ---       |     |    |         |        |       |
-| loop      | for | do | dotimes | dolist | block |
+| construct |     |     |         |        |       |
+| ---       | --- | --- | ---     | ---    | ---   |
+| loop      | for | do  | dotimes | dolist | block |
 
 ### Func
 
 | key         |           |       |      |        |        |
-| ---         |           |       |      |        |        |
+| ---         | ---       | ---   | ---  | ---    | ---    |
 | defun       | &optional | &rest | &key | lambda | mapcar |
 | return-from | return    |       |      |        |        |
 
