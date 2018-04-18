@@ -7,15 +7,16 @@
 | a-t-o-m | lisp | "string" |
 
 ### Set && Print
-| set      | class    | print      | class      |
-| ---      | ---      | ---        | ---        |
-| setq     | setq     | print      | print      |
-| defvar   | var      | write      | write      |
-| defmacro | macro    | write-line | write-line |
-| defun    | function | format     | format     |
-| let      | let      | prinl      | prinl      |
-| prog     | prog     | terpri     | terpri     |
-| setf     |          |            |            |
+| set          | class    | print      | class      |
+| ---          | ---      | ---        | ---        |
+| setq         | setq     | print      | print      |
+| setf         | setf     |            |            |
+| defvar       | var      | write      | write      |
+| defmacro     | macro    | write-line | write-line |
+| defun        | function | format     | format     |
+| let          | let      | prinl      | prinl      |
+| prog         | prog     | terpri     | terpri     |
+| defparameter |          |            |            |
 
 ### Caculate
 | name           | lisp       | common  |
@@ -85,3 +86,59 @@
 | :displaced-index-offset |               |                  |             |                |               |
 
 ### Symbol
+
+| key |
+|-----|
+| get |
+
+### Vector
+| key         |            |   |
+|-------------|------------|---|
+| vector-push | vector-pop |   |
+
+### Collect
+| key          |          |        |         |
+|--------------|----------|--------|---------|
+| defparameter | \*myset* | adjoin | pushnew |
+
+#### Memeber
+| key           |           |      |      |       |           |      |
+|---------------|-----------|------|------|-------|-----------|------|
+| member        | item      | list | &key | :test | :test-not | :key |
+| member-if     | predicate | list | &key | :key  |           |      |
+| member-if-not | predicate | list | &key | :key  |           |      |
+
+#### Union
+| key    |       |       |      |       |           |      |
+|--------|-------|-------|------|-------|-----------|------|
+| union  | list1 | list2 | &key | :test | :test-not | :key |
+| nunion | list1 | list2 | &key | :test | :test-not | :key |
+
+#### Intersection
+| key           |       |       |      |       |           |      |
+|---------------|-------|-------|------|-------|-----------|------|
+| intersection  | list1 | list2 | &key | :test | :test-not | :key |
+| nintersection | list1 | list2 | &key | :test | :test-not | :key |
+
+#### set-difference
+| key             |       |       |      |       |           |      |
+|-----------------|-------|-------|------|-------|-----------|------|
+| set-difference  | list1 | list2 | &key | :test | :test-not | :key |
+| nset-difference | list1 | list2 | &key | :test | :test-not | :key |
+
+### Tree
+| key       |           |            |        |        |        |         |
+|-----------|-----------|------------|--------|--------|--------|---------|
+| copy-list | copy-tree | tree-equal | subst  | nsubst | sublls | nsublls |
+| cons      | cdr       | car        | append |        |        |         |
+
+### Hash
+| key             |      |            |           |              |                   |
+|-----------------|------|------------|-----------|--------------|-------------------|
+| make-hash-table | &key | :test      | :size     | :rehash-size | :rehash-threshold |
+| gethash         | key  | hash-table | &optional | default      |                   |
+| remhash         | key  | hash-table |           |              |                   |
+| maphash         |      |            |           |              |                   |
+
+
+
