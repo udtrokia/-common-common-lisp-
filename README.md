@@ -7,16 +7,17 @@
 | a-t-o-m | lisp | "string" |
 
 ### Set && Print
-| set          | class    | print      | class      |
-| ---          | ---      | ---        | ---        |
-| setq         | setq     | print      | print      |
-| setf         | setf     |            |            |
-| defvar       | var      | write      | write      |
-| defmacro     | macro    | write-line | write-line |
-| defun        | function | format     | format     |
-| let          | let      | prinl      | prinl      |
-| prog         | prog     | terpri     | terpri     |
-| defparameter |          |            |            |
+| set          | class        | print      | class      |
+| ---          | ---          | ---        | ---        |
+| setq         | setq         | print      | print      |
+| setf         | setf         | princ      | princ      |
+| defparameter | defparameter | prin       | pprint     |
+| defvar       | var          | write      | write      |
+| defmacro     | macro        | write-line | write-line |
+| defun        | function     | format     | format     |
+| let          | let          | prinl      | prinl      |
+| prog         | prog         | terpri     | terpri     |
+|              |              |            |            |
 
 ### Caculate
 | name           | lisp       | common  |
@@ -139,6 +140,25 @@
 | gethash         | key  | hash-table | &optional | default      |                   |
 | remhash         | key  | hash-table |           |              |                   |
 | maphash         |      |            |           |              |                   |
+
+### Input && Output
+| key                     |                 |                  |               |            |        |
+|-------------------------|-----------------|------------------|---------------|------------|--------|
+| read                    | read-line       | read-char        | unread-char   | peek-char  | listen |
+| read-char-no-hang       | clear-input     | read-from-string | parse-integer | read-byte  |        |
+| write                   |                 |                  |               |            |        |
+| prin/print/pprint/princ | write-to-string | write-char       | write-string  | write-line | terpri |
+| fresh-line              | finish-output   | force-output     | clear-output  | write-byte |        |
+| format                  |                 |                  |               |            |        |
+| ~A                      | ~S              | ~D               | ~B            | ~O         | ~X     |
+| ~C                      | ~F              | ~E               | ~$            | ~%         | ~*     |
+| ~?                      |                 |                  |               |            |        |
+
+### File
+| key  |      |      |            |               |            |                    |                  |
+|------|------|------|------------|---------------|------------|--------------------|------------------|
+| open | file | &key | :direction | :element-type | :if-exists | :if-does-not-exist | :external-format |
+|      |      |      |            |               |            |                    |                  |
 
 
 
