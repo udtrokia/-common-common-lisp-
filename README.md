@@ -158,7 +158,25 @@
 | key  |      |      |            |               |            |                    |                  |
 |------|------|------|------------|---------------|------------|--------------------|------------------|
 | open | file | &key | :direction | :element-type | :if-exists | :if-does-not-exist | :external-format |
-|      |      |      |            |               |            |                    |                  |
 
+### Struct
+| key       |             |   |   |
+|-----------|-------------|---|---|
+| defstruct | make-struct |   |   |
 
+### Package
+| key          |              |              |                |                  |                |
+|--------------|--------------|--------------|----------------|------------------|----------------|
+| make-package | in-package   | find-package | rename-package | list-all-package | delete-package |
+| make-package | package-name | &key         | :nickname      | :use             | :export        |
 
+### Error
+| key   |        |      |       |
+|-------|--------|------|-------|
+| error | cerror | warn | break |
+
+### CLOS
+| key       |           |           |          |   |   |   |
+|-----------|-----------|-----------|----------|---|---|---|
+| defclass  | :accessor | :initform | :initarg |   |   |   |
+| defmethod |           |           |          |   |   |   |
